@@ -20,7 +20,7 @@ const Profile = () => {
                    <div className={p.item}>
                            post1
                    </div>
-                   <div className={p.profile}>
+                   <div className={p.item}>
                            post2
                    </div>
                </div>
