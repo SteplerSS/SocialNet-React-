@@ -12,20 +12,6 @@
 
 }
 
-.header {
-  grid-area: header;
-  background-color: cornflowerblue;
 
-}
 
-.navbar {
-  grid-area: navbar;
-  background-color: aquamarine;
 
-}
-
-.profile {
-  grid-area: profile;
-  background-color: dimgray;
-
-}
