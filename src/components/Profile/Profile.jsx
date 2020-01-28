@@ -7,13 +7,13 @@ const Profile = () => {
     return (
         <div className={p.profile}>
             <div>
-                 <img src='https://i.ytimg.com/vi/E0hnI4_egl8/maxresdefault.jpg'/>
+                <img src='https://i.ytimg.com/vi/E0hnI4_egl8/maxresdefault.jpg'/>
             </div>
             <div>
-                 ava + discription
+                ava + discription
             </div>
             <MyPosts/>
         </div>
-   )
+    )
 };
 export default Profile;

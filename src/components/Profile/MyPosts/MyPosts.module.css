@@ -1,11 +1,12 @@
 
 .item {
-    color: mediumvioletred;
-
+    color: greenyellow;
 }
+
 .item img {
     width: 80px;
 }
+
 .posts {
     background-color: cornflowerblue;
 }
