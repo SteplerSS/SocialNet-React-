@@ -1,0 +1,35 @@
+.news {
+    display: grid;
+
+    grid-template-columns:  1fr ;
+    grid-template-rows: 1fr 1fr;
+
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+
+    background-color: lightgray;
+
+}
+.new {
+
+    background-color: grey;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.newsPost {
+
+}
+
+.newTitle {
+    background-color: cadetblue;
+
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+
+
+

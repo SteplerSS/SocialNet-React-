@@ -1,7 +1,10 @@
 .navbar {
     grid-area: navbar;
     background-color: dimgray ;
-    padding: 20px;
+
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
 
 }
 
