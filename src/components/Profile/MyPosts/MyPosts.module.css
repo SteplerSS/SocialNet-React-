@@ -3,10 +3,11 @@
     color: greenyellow;
 }
 
-.item img {
-    width: 80px;
-}
 
 .posts {
     background-color: cornflowerblue;
+   padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+
 }

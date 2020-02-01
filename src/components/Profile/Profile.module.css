@@ -1,5 +1,10 @@
+.profile{
+    border-radius: 20px;
+}
+
 
 .profile img {
     width: 830px;
+    border-radius: 20px;
 }
 

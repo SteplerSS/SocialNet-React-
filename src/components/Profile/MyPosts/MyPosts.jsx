@@ -7,11 +7,15 @@ import s from './MyPosts.module.css'
 const MyPosts = () => {
 
     return (
-        <div>
-            MY POST
+        <div className={s.posts}>
+            <h3>MY POST</h3>
             <div>
-                <textarea></textarea>
-                <button>Add Post</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add Post</button>
+                </div>
             </div>
             <div>
                 NEW POST
