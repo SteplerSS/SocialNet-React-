@@ -6,7 +6,10 @@ let state = {
             {id: 1, message: 'Hi, how are you?', likesCount: 12},
             {id: 2, message: 'It is my first post!', likesCount: 0},
             {id: 3, message: 'It is my ', likesCount: 35}],
+
+            newPostText: '',
     },
+    
     dialogsPage: {
         dialogs: [
             {id: 1, name: 'Dimych',},
@@ -22,15 +25,24 @@ let state = {
     },
     sitebar: {}
 };
- export let addPost = (postMessage) => {
+
+window.state =state;
+
+ export let addPost = () => {
      
     let newPost = {
         id: 5,
-        message : postMessage,
+        message : state.profilePage.newPostText,
         likesCount :0
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText='';
      rerenderEnterTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText=newText;
+    rerenderEnterTree(state);
 };
 
 export default state;
