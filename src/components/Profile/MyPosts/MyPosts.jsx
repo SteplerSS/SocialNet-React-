@@ -3,27 +3,24 @@ import React from 'react';
 import Post from "./Post/Post";
 import s from './MyPosts.module.css';
 
-import {updateNewPostTextActionCreator, addPostActionCreator}  from '../../../Redux/profile-reducer'
+import { updateNewPostTextActionCreator, addPostActionCreator } from '../../../Redux/profile-reducer'
 
 
 
 const MyPosts = (props) => {
 
     let postsElements =
-        props.posts.map(p => <Post message={p.message} likeCount={p.likesCount}/>);
+        props.posts.map(p => <Post message={p.message} likeCount={p.likesCount} />);
 
     let newPostElement = React.createRef();
 
-    let addPosts = () => {
-        props.dispatch(addPostActionCreator()); 
-       
+    let onAddPosts = () => {
+        props.addPosts();
     };
 
-    let onPostChange = () =>{
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        let action = updateNewPostTextActionCreator(text);
-        props.dispatch(action);
-
+        props.updateNewPostText(text);
     };
 
     return (
@@ -31,11 +28,11 @@ const MyPosts = (props) => {
             <h3>MY POST</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange} ref={newPostElement} 
-                              value={props.newPostText}/>
+                    <textarea onChange={onPostChange} ref={newPostElement}
+                        value={props.newPostText} />
                 </div>
                 <div>
-                    <button onClick={addPosts}>Add Posts</button>
+                    <button onClick={onAddPosts}>Add Posts</button>
                 </div>
             </div>
             <div>
