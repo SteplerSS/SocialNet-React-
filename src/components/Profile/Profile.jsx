@@ -10,7 +10,7 @@ debugger;
     return (
         <div className={p.profile}>
             <ProfileInfo/>
-            <MyPostsConteiner store={props.store}/>                           
+            <MyPostsConteiner/>                           
         </div>
     )
 };
