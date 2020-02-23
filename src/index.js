@@ -8,22 +8,14 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 
 
-let rerenderEnterTree = (state) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
-            </Provider>
-        </BrowserRouter>, document.getElementById('root'));
-};
+ReactDOM.render(
+    <BrowserRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>, document.getElementById('root'));
 
 
-rerenderEnterTree(store.getState());
-
-store.subscribe(() => {
-    let state = store.getState();
-    rerenderEnterTree(state);
-});
 
 
 serviceWorker.unregister();

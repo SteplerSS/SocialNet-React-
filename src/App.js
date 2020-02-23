@@ -9,7 +9,7 @@ import News from "./components/News/News";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-const App = (props) => {
+const App = () => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
