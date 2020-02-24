@@ -1,3 +1,4 @@
+
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
 const SEND_MESSAGE = 'SEND_MESSAGE';
 
@@ -16,29 +17,36 @@ let initialState = {
     newMessageBody: "Stepler"
 };
 
-const dialogsReducer = (state=initialState, action) => {
+const dialogsReducer = (state = initialState, action) => {
+   
 
+    let stateCopy;
     switch (action.type) {
 
-        case UPDATE_NEW_MESSAGE_BODY:{
-            let stateCopy = {...state}
+        case UPDATE_NEW_MESSAGE_BODY:
+            stateCopy = {
+                ...state,
+                newMessageBody: action.body
+            }
+
             stateCopy.newMessageBody = action.body;
             return stateCopy;
-        };
-    
-        case SEND_MESSAGE:{
-            let stateCopy = {...state}
-            let body = stateCopy.newMessageBody;
-            stateCopy.newMessageBody = '';
 
-            stateCopy.messages.push({ id: 6, message: body });
+
+        case SEND_MESSAGE:
+            let body = state.newMessageBody;
+            stateCopy = {
+                ...state,
+                newMessageBody: '',
+                messages: [...state.messages, { id: 6, message: body }]
+            }
+
             return stateCopy;
-        }
+
         default:
             return state;
 
     }
-
 
 };
 
