@@ -21,5 +21,20 @@ export const usersAPI = {
 
     getAuth() {
         return instance.get(`auth/me`).then(response => response.data)
+    },
+
+    unfollow(userId){
+
+        return instance.delete(`follow/${userId}`)
+    },
+
+    follow(userId){
+
+        return instance.post(`follow/${userId}`)
+ 
     }
+    
+    
+
+
 };
