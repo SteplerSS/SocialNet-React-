@@ -5,6 +5,7 @@ import { follow, unfollow,  setCurrentPage, setTotalUsersCount,  toggleFollowing
 import Users from "./Users";
 
 import Preloader from '../common/preloader/Preloader';
+import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 
 
 
@@ -51,10 +52,11 @@ let mapStateToProps = (state) => {
     }
 }
 
+let withRedirect =  withAuthRedirect(UsersContainer)
 
 export default connect(mapStateToProps,
     {
         follow, unfollow, 
         setCurrentPage, setTotalUsersCount, 
         toggleFollowingProgress, getUsers: getUsers
-    })(UsersContainer);
+    })(withRedirect);
