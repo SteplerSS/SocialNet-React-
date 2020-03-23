@@ -17,7 +17,7 @@ const ProfileInfo = (props) => {
                 </div> */}
                 <div className={p.ava}>
                     <img src ={props.profile.photos.large}/>
-                   <ProfileStatus status={"Hello!! my frends "}/>
+                   <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                 </div>
             </div>
         </div>
