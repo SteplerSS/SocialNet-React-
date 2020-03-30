@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './users.module.css';
 import icon from '../../assets/images/icon.png';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 
