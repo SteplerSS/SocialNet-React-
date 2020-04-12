@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import './App.css';
-
 import Navbar from "./components/Navbar/Navbar";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
@@ -15,6 +13,8 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { withRouter } from 'react-router-dom';
 import Preloader from "./components/common/preloader/Preloader";
+import store from "./Redux/redux-store";
+import { Provider } from 'react-redux';
 
 
 
@@ -56,9 +56,17 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default compose(
+
+let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, { initializeApp }))(App);
 
+const SamuraiJSApp = (props) => {
+    return <BrowserRouter>
+        <Provider store={store}>
+            <AppContainer />
+        </Provider>
+    </BrowserRouter>
+}
 
-
+export default SamuraiJSApp;
