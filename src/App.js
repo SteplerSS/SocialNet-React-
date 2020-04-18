@@ -2,7 +2,7 @@ import React, { Component, Suspense } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
-import { BrowserRouter, Route } from "react-router-dom";
+import {BrowserRouter, HashRouter, Route } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer"
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from "./components/Login/Login";
@@ -34,7 +34,7 @@ class App extends Component {
             return <Preloader/>
 
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className='app-wrapper'>
                     <HeaderContainer />
                     <Navbar />
@@ -53,7 +53,7 @@ class App extends Component {
                         {/*<Route path='/settings' component={Settings}/>*/}
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 };
@@ -72,11 +72,11 @@ let AppContainer = compose(
     connect(mapStateToProps, { initializeApp }))(App);
 
 const SamuraiJSApp = (props) => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SamuraiJSApp;
