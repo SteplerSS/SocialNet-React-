@@ -31,7 +31,7 @@ const LoginForm = ({handleSubmit, error}) => {
                 </div>
             }
             <div >
-                <button>Log in</button>
+                <button>Login</button>
             </div>
         </form>
     )

@@ -1,4 +1,6 @@
-
+.ava {
+  padding-left: 30px;
+}
 .post {
     background-color: cadetblue;
     border-radius: 20px;
@@ -11,6 +13,10 @@
 
 .mainPhoto {
   max-width: 200px;  
+}
+
+.contact {
+  padding-left: 30px;
 }
 
 
