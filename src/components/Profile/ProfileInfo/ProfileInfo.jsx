@@ -39,12 +39,12 @@ const ProfileInfo = (props) => {
     return (
         <div className={s.post}>
             <div>
-                {/* <div className={p.img}>
+                {/* <div className={s.img}>
                     <img src='https://i.ytimg.com/vi/E0hnI4_egl8/maxresdefault.jpg'/>
                 </div> */}
                 <div className={s.ava}>
                     <div>
-                        <span> Id </span>
+                        <span>ID  </span>
                     </div>
                     <div>
                         <img src={props.profile.photos.large || icon} className={s.mainPhoto} />
