@@ -5,10 +5,8 @@ import {addPostActionCreator, deletePost} from "./profile-reducer";
 
     let state = {
         posts: [
-            { id: 1, message: 'Hi, how are you?', likesCount: 12 },
-            { id: 2, message: 'It is my first post!', likesCount: 0 },
-            { id: 3, message: 'It is my ', likesCount: 35 }],
-             
+            { id: 1, message: 'Hi, how are you?', likesCount: 12 }],
+                   
     };
 
 

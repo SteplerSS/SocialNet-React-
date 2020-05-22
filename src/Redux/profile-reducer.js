@@ -11,8 +11,7 @@ const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 let initialState = {
     posts: [
         { id: 1, message: 'Hi, how are you?', likesCount: 12 },
-        { id: 2, message: 'It is my first post!', likesCount: 0 },
-        { id: 3, message: 'It is my ', likesCount: 35 }],
+        ],
 
 
     profile: null,

@@ -2,14 +2,15 @@ import React, { Component, Suspense } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
-import {BrowserRouter, HashRouter, Route } from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, withRouter} from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer"
 import HeaderContainer from './components/Header/HeaderContainer';
+import LoginHeaderContainer from './components/Header/LoginHeaderContainer';
 import Login from "./components/Login/Login";
 import { initializeApp } from "./Redux/app-reducer";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { withRouter } from 'react-router-dom';
+
 import Preloader from "./components/common/preloader/Preloader";
 import store from "./Redux/redux-store";
 import { Provider } from 'react-redux';
@@ -44,9 +45,16 @@ class App extends Component {
         return (
             <HashRouter>
                 <div className='app-wrapper'>
+                    <div className='header'>
                     <HeaderContainer />
+                    </div>
+                    <div className='navbar' >
                     <Navbar />
-                    <div className='app-wrapper-content'>
+                    </div>
+                    <div className='login'>
+                    <LoginHeaderContainer/>
+                    </div>
+                    <div className='content'>
 
                         <Route path='/dialogs' render={() =>{ 
                         return <React.Suspense fallback={<Preloader/> }><DialogsContainer /></React.Suspense>}}/>

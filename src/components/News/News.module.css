@@ -4,30 +4,26 @@
     grid-template-columns:  1fr ;
     grid-template-rows: 1fr 1fr;
 
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
+  
+    border-radius: 5px;
 
     background-color: lightgray;
 
 }
 .new {
 
-    background-color: grey;
+    background-color: white;
     padding: 5px;
     margin: 5px;
-    border-radius: 10px;
-}
-.newsPost {
-
+    border-radius: 5px;
 }
 
 .newTitle {
-    background-color: cadetblue;
+    background-color: white;
 
     padding: 5px;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
